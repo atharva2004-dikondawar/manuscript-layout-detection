@@ -1,0 +1,1 @@
+"""Manuscript layout detection inference package."""
