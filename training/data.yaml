@@ -1,0 +1,11 @@
+path: ../dataset
+
+train: images/train
+val: images/val
+
+names:
+  0: main_text
+  1: header_text
+  2: footer_text
+  3: side_text
+  4: filler
