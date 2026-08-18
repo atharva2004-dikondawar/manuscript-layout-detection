@@ -16,7 +16,11 @@ Therefore, training is **not required** to run the submission — this directory
 
 ## Dataset
 
-The training dataset itself is **not included** in this repository (image collections of this size aren't practical to commit directly). To retrain, organize your dataset in the following structure:
+The full training dataset (173 manually annotated manuscript images, including original images and YOLO-format label files) is available for download here:
+
+**Dataset download:** https://drive.google.com/drive/folders/1wDzXJT2WOGMleG9ejMIIcVL01J5QW4Pd
+
+Download and extract the folder, then organize it into the following structure (this matches what `training/data.yaml` already expects, so no further configuration is needed if you place it exactly as shown):
 
 ```
 dataset/
@@ -61,8 +65,6 @@ The submitted model was trained using the following setup:
 
 ### Augmentation
 
-Augmentation was kept deliberately conservative, since aggressive geometric augmentation (large rotations, flips) can distort real page-layout structure in ways that don't reflect how manuscripts actually vary — a flipped page, for instance, doesn't represent a realistic manuscript orientation.
-
 | Setting | Value |
 |---|---|
 | Rotation | 2.0° |
@@ -72,6 +74,8 @@ Augmentation was kept deliberately conservative, since aggressive geometric augm
 | Horizontal flip | Disabled |
 | Vertical flip | Disabled |
 | Mosaic | 0.2 |
+
+If you place the downloaded `dataset/` folder as a direct sibling of `training/` (i.e. `manuscript-layout-detection/dataset/`), the included `training/data.yaml` will find it automatically — no path editing required.
 
 ---
 

@@ -1,3 +1,10 @@
+# Dataset download (173 manually annotated manuscript images + YOLO-format labels):
+# https://drive.google.com/drive/folders/1wDzXJT2WOGMleG9ejMIIcVL01J5QW4Pd
+#
+# Download and extract the folder, then place it as a sibling of `training/`
+# named `dataset/` (matching the path below), or edit `path:` to point at
+# wherever you extracted it.
+
 path: ../dataset
 
 train: images/train
